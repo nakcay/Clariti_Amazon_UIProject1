@@ -42,10 +42,6 @@ public class AmazonSteps {
         ap.clickMethod(ap.getSignInSubmitBtn());
     }
 
-    @Then("as a user I should be able to see my account on the login page")
-    public void asAUserIShouldBeAbleToSeeMyAccountOnTheLoginPage() {
-    }
-
     @And("I send some keywords to search bar and click on the search icon")
     public void iSendSomeKeywordsToSearchBarAndClickOnTheSearchIcon() {
         ap.sendKeysMethod(ap.getSearchBar(), "java programming books");
@@ -71,7 +67,8 @@ public class AmazonSteps {
 
 
     @And("I click to the shopping cart")
-    public void iClickToTheShoppingCart() {
+    public void iClickToTheShoppingCart()
+    {
         ap.clickMethod(ap.getCartIcon());
     }
 
@@ -80,6 +77,7 @@ public class AmazonSteps {
         ap.waitMethod(3);
         Assert.assertTrue(ap.getBookName().getText().contains("100+"));
         Assert.assertEquals(ap.getQuantityNum().getText(), "2");
+        ap.waitMethod(2);
         ap.clickMethod(ap.getDeleteItemBtn()); // This step was Intentionally added because of the cross browser testing.
     }
 

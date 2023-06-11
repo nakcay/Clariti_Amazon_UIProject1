@@ -1,6 +1,6 @@
-Feature: sign in
+Feature: Validating add to cart button
 
-  Scenario Outline: amazon
+  Scenario Outline:
     Given navigate to web page
     And I click on the sign in button and fill the forms up with valid "<email>" and "<password>"
     Then as a user I should be able to see my name on the right hand side of the search icon and to see home page after login

@@ -11,7 +11,6 @@ import org.testng.annotations.Parameters;
         features = {"src/test/java/FeatureFiles/Amazon.feature"},
         glue = {"StepDefinitions"})
 
-
 public class RunnerForCrossBrowserTesting extends AbstractTestNGCucumberTests {
     @BeforeClass
     @Parameters(value = "browser")

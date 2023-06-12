@@ -1,4 +1,4 @@
-Feature:Validating Login Feature
+Feature:Validating Login Functionality
 
   Scenario Outline:(Failed Scenario for ScreenShot)Validate that a user is not able to login with invalid password
     Given navigate to web page

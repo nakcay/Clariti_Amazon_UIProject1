@@ -12,5 +12,5 @@ Feature: Validating add to cart button
     Then As a user I should be able to see the correct book and its quantity in the shopping cart
     Examples:
       | email                   | password  |
-      | nourakcay1034@gmail.com | Calgary1@ |
+      | nourakcay1034@gmail.com | Calgary1@1 |
 

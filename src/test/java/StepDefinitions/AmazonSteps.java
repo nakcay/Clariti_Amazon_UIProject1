@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -50,6 +51,7 @@ public class AmazonSteps {
 
     @And("I click on the java book")
     public void iClickOnTheJavaBook() {
+        ap.wait.until(ExpectedConditions.visibilityOf(ap.getJavaBook()));
         ap.clickMethod(ap.getJavaBook());
     }
 

@@ -25,13 +25,6 @@ public class Hooks {
         LocalDateTime endTime = LocalDateTime.now();
         Duration duration = Duration.between(startDateTime, endTime);
         if (scenario.isFailed()) {
-/**
- * if (scenario.isFailed()) {
- *             // Take a screenshot
- *             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
- *
- *             // Embed the screenshot in the report
- *             scenario.embed(screenshot, "image/png");*/
             final byte[] byteImage = ((TakesScreenshot) BasicDriver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(byteImage, "image/png", scenario.getName());
         }
